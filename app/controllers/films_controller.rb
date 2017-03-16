@@ -4,12 +4,16 @@ class FilmsController < ApplicationController
   end
 
   def show
-    @film = Film.find(params[:id])
+    @film = Film.includes(:related_films, :ratings)
+                .find_by(url_slug: params[:url_slug])
+
+    related_ids = @film.related_films.map(&:related_film_id)
+    @related_films = Film.where('id IN (?)', related_ids)
   end
 
   def search
     param = params[:title].downcase
-    @films = Film.where('lower(title) LIKE ?', param)
+    @films = Film.where('lower(title) LIKE ?', "%#{param}%")
     render 'films/index'
   end
 end

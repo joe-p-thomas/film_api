@@ -1,1 +1,1 @@
-json.extract! film, :title, :description, :url_slug, :year
+json.extract! film, :id, :title, :description, :url_slug, :year
