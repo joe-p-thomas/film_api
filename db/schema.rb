@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316010138) do
+ActiveRecord::Schema.define(version: 20170316190628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20170316010138) do
     t.index ["user_id"], name: "index_ratings_on_user_id", using: :btree
   end
 
-  create_table "related_films", force: :cascade do |t|
+  create_table "relationships", force: :cascade do |t|
     t.integer "film_id",         null: false
     t.integer "related_film_id", null: false
-    t.index ["film_id", "related_film_id"], name: "index_related_films_on_film_id_and_related_film_id", unique: true, using: :btree
-    t.index ["film_id"], name: "index_related_films_on_film_id", using: :btree
+    t.index ["film_id", "related_film_id"], name: "index_relationships_on_film_id_and_related_film_id", unique: true, using: :btree
+    t.index ["film_id"], name: "index_relationships_on_film_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
