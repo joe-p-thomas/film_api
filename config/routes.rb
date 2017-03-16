@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/films/search', to: 'films#search'
+  get '/films/:url_slug', to: 'films#show'
+
+  resources :films, only: [:index]
+
 end
