@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'static_pages#index'
 
   get '/films/search/:title', to: 'films#search'
   get '/films/:url_slug', to: 'films#show'
