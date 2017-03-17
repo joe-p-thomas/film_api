@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :films, only: [:index]
   resources :ratings, only: [:create]
+  resource :session, only: [:create, :destroy]
+  resources :users, only: [:create]
 
 end
