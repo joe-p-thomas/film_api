@@ -1,7 +1,7 @@
 export const search = (title) => (
   $.ajax({
     method: 'GET',
-    url: 'film/search',
-    data: {title}
+    url: `films/search`,
+    data: title
   })
 );

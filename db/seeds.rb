@@ -31,7 +31,7 @@ film4 = Film.create(title: 'The Story of George',
 
 film5 = Film.create(title: 'Zee and Bee Go Skiing',
                     description: 'The tragic story of Zee and Bee on their snowy adventures.',
-                    url_slug: '',
+                    url_slug: 'zee_and_bee_go_skiing',
                     year: 1991)
 
 film6 = Film.create(title: 'Ahead of Its Time',

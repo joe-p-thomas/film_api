@@ -10,10 +10,10 @@ const FilmReducer = (state = defaultState, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_FILMS:
-      newState = merge({}, state, action.films);
+      newState = merge({}, state, {films: action.films});
       return action.films;
     case RECEIVE_FILM:
-      newState = merge({}, state, action.film);
+      newState = merge({}, state, {film_detail: action.film});
       return action.film;
     default:
       return state;
