@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   get '/films/search', to: 'films#search'
-  get '/films/:url_slug', to: 'films#show'
+  get '/films/url/:url_slug', to: 'films#show'
 
   resources :films, only: [:index]
   resources :ratings, only: [:create]

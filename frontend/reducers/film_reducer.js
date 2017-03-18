@@ -3,18 +3,18 @@ import { RECEIVE_FILMS, RECEIVE_FILM } from '../actions/film_actions';
 
 const defaultState = {
   films: [],
-  film_detail: {}
+  filmDetail: {}
 };
 
 const FilmReducer = (state = defaultState, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_FILMS:
-      newState = merge({}, state, {films: action.films});
-      return action.films;
+      newState = merge({}, defaultState, action.films);
+      return newState;
     case RECEIVE_FILM:
-      newState = merge({}, state, {film_detail: action.film});
-      return action.film;
+      newState = merge({}, defaultState, {filmDetail: action.film});
+      return newState;
     default:
       return state;
   }

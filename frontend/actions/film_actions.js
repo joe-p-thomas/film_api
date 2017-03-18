@@ -18,3 +18,9 @@ export const requestFilms = (title) => (dispatch) => (
     (res) => dispatch(receiveFilms(res))
   )
 );
+
+export const requestFilm = (urlSlug) => (dispatch) => (
+  apiUtils.filmDetail(urlSlug).then(
+    (res) => dispatch(receiveFilm(res))
+  )
+);
