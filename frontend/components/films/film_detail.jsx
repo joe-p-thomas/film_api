@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+import RatingsContainer from '../ratings/ratings_container';
+
 class FilmDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -22,13 +24,14 @@ class FilmDetail extends React.Component {
     ));
     return (
       <div>
-        <h1>Film Detail</h1>
         <h2>{this.props.film.title} ({this.props.film.year})</h2>
         <h3>Description:</h3>
         <p>{this.props.film.description}</p>
 
         <h3>Avg Rating:</h3>
-        <p></p>
+        <p>{this.props.film.avgRating}</p>
+
+        <RatingsContainer film={this.props.film}/>
 
         <h3>Related Films:</h3>
         <ul onClick={this.handleClick}>

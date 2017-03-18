@@ -4,7 +4,9 @@ class FilmsController < ApplicationController
   end
 
   def show
-    @film = Film.includes(:related_films).find_by(url_slug: params[:url_slug])
+    @film = Film.includes(:related_films, :ratings)
+      .find_by(url_slug: params[:url_slug])
+    @rating = @film.ratings.where('user_id = ?', current_user.id).first
   end
 
   def search

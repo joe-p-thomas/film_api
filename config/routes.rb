@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/films/url/:url_slug', to: 'films#show'
 
   resources :films, only: [:index]
-  resources :ratings, only: [:create]
+  resources :ratings, only: [:create, :update]
   resource :session, only: [:create, :destroy]
   resources :users, only: [:create]
 

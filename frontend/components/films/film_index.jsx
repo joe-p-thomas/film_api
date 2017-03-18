@@ -24,7 +24,7 @@ class FilmIndex extends React.Component {
       <div key={i}
            id={film.urlSlug}
            className={'book-list-item'}>
-        <h2>{film.title}</h2>
+        <h3>{film.title}</h3>
       </div>
     ));
     return (
