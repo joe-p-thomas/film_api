@@ -29,7 +29,6 @@ class FilmIndex extends React.Component {
     ));
     return (
       <div>
-        <h1>Film Index</h1>
         <ul onClick={this.handleClick}
             className={'book-list'}>
           {films}
