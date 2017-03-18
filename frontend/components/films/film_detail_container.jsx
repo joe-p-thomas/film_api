@@ -5,8 +5,4 @@ const mapStateToProps = (state) => ({
   film: state.films.filmDetail
 });
 
-const mapDispatchToProps = (dispatch) => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(FilmDetail);
+export default connect(mapStateToProps)(FilmDetail);
