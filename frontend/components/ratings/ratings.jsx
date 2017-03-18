@@ -5,7 +5,7 @@ class Ratings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: props.film.userRating.score,
+      score: this.props.film.userRating.score,
       film_id: this.props.film.id
     };
 
@@ -34,7 +34,7 @@ class Ratings extends React.Component {
         <StarRatingComponent
           name="rating"
           starCount={5}
-          value={this.state.score}
+          value={this.props.film.userRating.score}
           onStarClick={this.handleInput}
           starColor={'#e6994c'}
           emptyStarColor={'#ccc'}/>
