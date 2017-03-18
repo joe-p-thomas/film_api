@@ -8,6 +8,11 @@ class FilmDetail extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
+    this.returnSearch = this.returnSearch.bind(this);
+  }
+
+  returnSearch() {
+    this.props.router.push('/search');
   }
 
   handleClick(e) {
@@ -24,6 +29,7 @@ class FilmDetail extends React.Component {
     ));
     return (
       <div>
+        <button onClick={this.returnSearch}>Back to Search</button>
         <h2>{this.props.film.title} ({this.props.film.year})</h2>
         <h3>Description:</h3>
         <p>{this.props.film.description}</p>
