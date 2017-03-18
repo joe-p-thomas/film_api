@@ -60,68 +60,68 @@ film10 = Film.create(title: 'Perry Hotter: A Lizard\'s Tale',
                      year: 2017)
 
 
-RelatedFilm.create(film_id: film1.id,
-                   related_film_id: film2.id)
+Relationship.create(film_id: film1.id,
+                    related_film_id: film2.id)
 
-RelatedFilm.create(film_id: film1.id,
-                   related_film_id: film4.id)
+Relationship.create(film_id: film1.id,
+                    related_film_id: film4.id)
 
-RelatedFilm.create(film_id: film1.id,
-                   related_film_id: film7.id)
+Relationship.create(film_id: film1.id,
+                    related_film_id: film7.id)
 
-RelatedFilm.create(film_id: film2.id,
-                   related_film_id: film1.id)
+Relationship.create(film_id: film2.id,
+                    related_film_id: film1.id)
 
-RelatedFilm.create(film_id: film2.id,
-                   related_film_id: film4.id)
+Relationship.create(film_id: film2.id,
+                    related_film_id: film4.id)
 
-RelatedFilm.create(film_id: film2.id,
-                   related_film_id: film7.id)
+Relationship.create(film_id: film2.id,
+                    related_film_id: film7.id)
 
-RelatedFilm.create(film_id: film4.id,
-                   related_film_id: film1.id)
+Relationship.create(film_id: film4.id,
+                    related_film_id: film1.id)
 
-RelatedFilm.create(film_id: film4.id,
-                   related_film_id: film2.id)
+Relationship.create(film_id: film4.id,
+                    related_film_id: film2.id)
 
-RelatedFilm.create(film_id: film4.id,
-                   related_film_id: film7.id)
+Relationship.create(film_id: film4.id,
+                    related_film_id: film7.id)
 
-RelatedFilm.create(film_id: film5.id,
-                   related_film_id: film6.id)
+Relationship.create(film_id: film5.id,
+                    related_film_id: film6.id)
 
-RelatedFilm.create(film_id: film5.id,
-                   related_film_id: film8.id)
+Relationship.create(film_id: film5.id,
+                    related_film_id: film8.id)
 
-RelatedFilm.create(film_id: film5.id,
-                   related_film_id: film9.id)
+Relationship.create(film_id: film5.id,
+                    related_film_id: film9.id)
 
-RelatedFilm.create(film_id: film5.id,
-                   related_film_id: film10.id)
+Relationship.create(film_id: film5.id,
+                    related_film_id: film10.id)
 
-RelatedFilm.create(film_id: film6.id,
-                   related_film_id: film8.id)
+Relationship.create(film_id: film6.id,
+                    related_film_id: film8.id)
 
-RelatedFilm.create(film_id: film6.id,
-                   related_film_id: film9.id)
+Relationship.create(film_id: film6.id,
+                    related_film_id: film9.id)
 
-RelatedFilm.create(film_id: film6.id,
-                   related_film_id: film10.id)
+Relationship.create(film_id: film6.id,
+                    related_film_id: film10.id)
 
-RelatedFilm.create(film_id: film7.id,
-                   related_film_id: film1.id)
+Relationship.create(film_id: film7.id,
+                    related_film_id: film1.id)
 
-RelatedFilm.create(film_id: film7.id,
-                   related_film_id: film2.id)
+Relationship.create(film_id: film7.id,
+                    related_film_id: film2.id)
 
-RelatedFilm.create(film_id: film7.id,
-                   related_film_id: film4.id)
+Relationship.create(film_id: film7.id,
+                    related_film_id: film4.id)
 
-RelatedFilm.create(film_id: film8.id,
-                   related_film_id: film9.id)
+Relationship.create(film_id: film8.id,
+                    related_film_id: film9.id)
 
-RelatedFilm.create(film_id: film8.id,
-                   related_film_id: film10.id)
+Relationship.create(film_id: film8.id,
+                    related_film_id: film10.id)
 
-RelatedFilm.create(film_id: film9.id,
-                   related_film_id: film10.id)
+Relationship.create(film_id: film9.id,
+                    related_film_id: film10.id)

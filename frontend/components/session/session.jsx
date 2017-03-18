@@ -16,7 +16,7 @@ class Session extends React.Component {
     };
 
     this.guestUser = {
-      username: 'guest_user',
+      username: 'guest',
       password: 'password'
     };
 
@@ -34,14 +34,20 @@ class Session extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.action === 'Log In') {
-      this.props.login(this.state.user);
+      this.props.login(this.state.user).then(() => {
+        this.props.router.push('/search');
+      });
     } else {
-      this.props.signup(this.state.user);
+      this.props.signup(this.state.user).then(() => {
+        this.props.router.push('/search');
+      });
     }
   }
 
   guestLogin() {
-    this.props.login(this.guestUser);
+    this.props.login(this.guestUser).then(() => {
+      this.props.router.push('/search');
+    });
   }
 
   toggleAction() {
@@ -77,7 +83,7 @@ class Session extends React.Component {
                  name='password'
                  onChange={this.handleInput}
                  value={this.state.user.password}
-                 placeholder={'password'}>
+                 placeholder={'password'} >
           </input>
 
           <button onClick={this.handleSubmit}>Submit</button>
