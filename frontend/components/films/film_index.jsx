@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class FilmIndex extends React.Component {
   constructor(props) {
@@ -22,4 +23,4 @@ class FilmIndex extends React.Component {
   }
 }
 
-export default FilmIndex;
+export default withRouter(FilmIndex);
