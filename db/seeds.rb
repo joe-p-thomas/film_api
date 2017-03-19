@@ -8,7 +8,6 @@
 guest = User.create(username: 'guest',
                     password: 'password')
 
-
 film1 = Film.create(title: 'A Wonderful Film',
                     description: 'A cute film about lots of wonderful stuff.',
                     url_slug: 'a_wonderful_film',
@@ -125,3 +124,17 @@ Relationship.create(film_id: film8.id,
 
 Relationship.create(film_id: film9.id,
                     related_film_id: film10.id)
+
+users = (1..20).to_a
+users.map! do |i|
+  User.create(username: "guest#{i}",
+              password: "password")
+end
+
+scores = (1..5).to_a
+film_ids = (1..10).to_a
+200.times do
+  Rating.create(user_id: users.sample.id,
+                film_id: film_ids.sample,
+                score: scores.sample)
+end

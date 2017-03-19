@@ -8,7 +8,7 @@ json.userRating do
   end
 end
 
-json.set! :avgRating, @film.ratings.sum(&:score).to_f / @film.ratings.count
+json.set! :avgRating, (@film.ratings.sum(&:score).to_f / @film.ratings.count).round(2)
 
 json.related_films do
   json.array! @film.related_films do |related_film|
