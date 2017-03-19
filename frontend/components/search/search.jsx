@@ -24,12 +24,12 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='search'>
         <h1>Search</h1>
         <input type='text'
                onChange={this.handleInput}
                value={this.state.query}
-               placeholder={'search'} />
+               placeholder={''} />
         <FilmIndexContainer />
       </div>
     );

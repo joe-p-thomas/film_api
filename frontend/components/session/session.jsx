@@ -35,18 +35,18 @@ class Session extends React.Component {
     e.preventDefault();
     if (this.state.action === 'Log In') {
       this.props.login(this.state.user).then(() => {
-        this.props.router.push('/search');
+        this.props.router.push('/');
       });
     } else {
       this.props.signup(this.state.user).then(() => {
-        this.props.router.push('/search');
+        this.props.router.push('/');
       });
     }
   }
 
   guestLogin() {
     this.props.login(this.guestUser).then(() => {
-      this.props.router.push('/search');
+      this.props.router.push('/');
     });
   }
 
@@ -68,7 +68,7 @@ class Session extends React.Component {
     ));
 
     return (
-      <div>
+      <div className='auth'>
         <h1>{this.state.action}</h1>
         {errors}
         <form className='auth-form'>
@@ -89,7 +89,7 @@ class Session extends React.Component {
           <button onClick={this.handleSubmit}>Submit</button>
         </form>
         <p>or</p>
-        <div>
+        <div className='auth-buttons'>
           <button onClick={this.guestLogin}>Guest</button>
           <button onClick={this.toggleAction}>{this.state.altAction}</button>
         </div>

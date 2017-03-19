@@ -12,7 +12,7 @@ class FilmDetail extends React.Component {
   }
 
   returnSearch() {
-    this.props.router.push('/search');
+    this.props.router.push('/');
   }
 
   handleClick(e) {
@@ -23,7 +23,7 @@ class FilmDetail extends React.Component {
 
   render() {
     const relatedFilms = this.props.film.relatedFilms.map((film) => (
-      <p key={film.id} id={film.urlSlug}>
+      <p key={film.id} id={film.urlSlug} className='related-film'>
         {film.title}
       </p>
     ));
@@ -40,7 +40,7 @@ class FilmDetail extends React.Component {
         <RatingsContainer film={this.props.film}/>
 
         <h3>Related Films:</h3>
-        <ul onClick={this.handleClick}>
+        <ul onClick={this.handleClick} className='related-film-list'>
           {relatedFilms}
         </ul>
       </div>

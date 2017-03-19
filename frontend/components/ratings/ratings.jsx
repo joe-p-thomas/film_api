@@ -44,7 +44,7 @@ class Ratings extends React.Component {
              onChange={this.handleInput}/>
     ));
     return(
-      <div>
+      <div className='rating'>
         <h3>Rate this Film:</h3>
           <form>
             1 {buttons} 5

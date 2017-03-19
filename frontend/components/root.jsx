@@ -33,7 +33,7 @@ const Root = ({store}) => {
       <Router history={hashHistory} >
         <Route path='/auth' component={SessionContainer} onEnter={ensureLogout}/>
         <Route path='/' component={LogoutContainer} onEnter={ensureLogin}>
-          <Route path='/search' component={SearchContainer}/>
+          <IndexRoute component={SearchContainer}/>
           <Route path='/film/:urlSlug'
                  component={FilmDetailContainer}
                  onEnter={requestFilmDetail}/>

@@ -1,0 +1,36 @@
+.auth {
+  margin: auto;
+  margin-top: 15%;
+  width: 250px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  box-shadow: 0px 0px 4px #ddd;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.auth-form * {
+  margin: 5px;
+}
+
+.auth-buttons {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-buttons button {
+  width: calc(50% - 5px)
+}
+
+.logout-button {
+ margin-left: 5px;
+}
