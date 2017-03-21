@@ -1,4 +1,5 @@
 # Film API
+Web application in which users can search and review films.
 
 ## Setup
 Note: Postgres will need to be installed and running on your computer.
